@@ -1,18 +1,18 @@
 {
-    "bg": "https://i2.wp.com/css-tricks.com/wp-content/uploads/2017/06/css-is-awesome-scaled.jpg?resize=1536%2C1208&ssl=1",
-    "title": "Quiz CSS da Alura",
-    "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
+    "bg": "https://veja.abril.com.br/wp-content/uploads/2016/06/craques-brasileirao-futebol-1984-original.jpeg",
+    "title": "Quiz do Fluminense",
+    "description": "Teste os seus conhecimentos sobre a história do Fluminense",
     "questions": [
       {
         "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-        "title": "Como fazer um seletor por id via CSS?",
+        "title": "Quantos títulos brasileiros o Fluminense já conquistou?",
         "description": "Essa é pra aquecer",
         "answer": 2,
         "alternatives": [
-          ".elemento",
-          "*elemento",
-          "#elemento",
-          "%elemento"
+          "2",
+          "3",
+          "4",
+          "5"
         ]
       },
       {
