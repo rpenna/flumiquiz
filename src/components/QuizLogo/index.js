@@ -1,10 +1,9 @@
 import styled from 'styled-components';
-
 import React from 'react';
 import PropTypes from 'prop-types';
 
 function Logo({ className }) {
-  //return (
+  // return (
   //  <svg className={className} width="135" height="67" viewBox="0 0 135 67" fill="none" xmlns="http://www.w3.org/2000/svg">
   //    <g clipPath="url(#clip0)">
   //      <mask id="path-1-outside-1" maskUnits="userSpaceOnUse" x="2" y="2" width="110" height="50" fill="black">
@@ -26,7 +25,7 @@ function Logo({ className }) {
   //      </clipPath>
   //    </defs>
   //  </svg>
-  //);
+  // );
   const imageUrl = 'https://logodownload.org/wp-content/uploads/2016/09/fluminense-logo-escudo-1.png';
   const Fluminense = styled.img`
     width: 108px;
