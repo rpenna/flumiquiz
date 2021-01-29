@@ -11,6 +11,7 @@ import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
 import Input from '../src/components/Input';
 import Button from '../src/components/Button';
+import Link from '../src/components/Link';
 
 export const QuizContainer = styled.div`
   width: 100%;
@@ -73,7 +74,10 @@ export default function Home() {
 
                 return (
                   <li key={`${externalUrl}`}>
-                    <Widget.Topic href={`/quiz/${projectName}___${githubUser}`}>
+                    <Widget.Topic
+                      as={Link}
+                      href={`/quiz/${projectName}___${githubUser}`}
+                    >
                       {`${githubUser}/${projectName}`}
                     </Widget.Topic>
                   </li>

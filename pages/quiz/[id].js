@@ -3,7 +3,7 @@ import { ThemeProvider } from 'styled-components';
 import QuizScreen from '../../src/screens/Quiz';
 
 export default function QuizDaGaleraPage({ externalDb }) {
-    console.log(externalDb)
+  console.log(externalDb);
   return (
     <ThemeProvider theme={externalDb.theme}>
       <QuizScreen
@@ -15,22 +15,26 @@ export default function QuizDaGaleraPage({ externalDb }) {
 }
 
 export async function getServerSideProps(context) {
-  const [projectName, githubUser] = context.query.id.split('___');
-  const link = `https://${projectName}.${githubUser}.vercel.app/api/db`;
-  const externalDb = await fetch(link)
-    .then((answer) => {
-      if (answer.ok) {
-        return answer.json();
-      }
-      throw new Error('Failed to read data from external database');
-    })
-    .then(((objectAnswer) => objectAnswer))
-    .catch((error) => {
-      console.error(error);
-    });
-  return {
-    props: {
-      externalDb,
-    },
-  };
+  try {
+    const [projectName, githubUser] = context.query.id.split('___');
+    const link = `https://${projectName}.${githubUser}.vercel.app/api/db`;
+    const externalDb = await fetch(link)
+      .then((answer) => {
+        if (answer.ok) {
+          return answer.json();
+        }
+        throw new Error('Failed to read data from external database');
+      })
+      .then(((objectAnswer) => objectAnswer))
+      .catch((error) => {
+        console.error(error);
+      });
+    return {
+      props: {
+        externalDb,
+      },
+    };
+  } catch (error) {
+    throw new Error(error);
+  }
 }
